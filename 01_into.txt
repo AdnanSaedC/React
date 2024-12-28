@@ -1,0 +1,7 @@
+React is nothing but its a library
+
+if you want to work with web you need to study additional React-Dom
+if you want to work with app you need to study additional React-Native
+
+what is npm-node package manager
+npx-node package executor
