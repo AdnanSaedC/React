@@ -5,3 +5,13 @@ if you want to work with app you need to study additional React-Native
 
 what is npm-node package manager
 npx-node package executor
+
+Bundler is nothing but it compiles many files and converts into
+one js files
+
+Start everything from package.Json
+
+web-vital is a application which tracks performance of the browser
+
+build is nothing but it converts raect into js
+because browser only knows html,css,javaScript

@@ -1,0 +1,11 @@
+to create og react apptype 
+npx create-react-app folderName
+
+it is a lengthy process and requires huge internet
+now go to particular file and type 
+npm run start
+npm run build-this will give you pure javaScript
+
+you will get a lot of files so this is not best practice
+
+now 
