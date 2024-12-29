@@ -8,4 +8,8 @@ npm run build-this will give you pure javaScript
 
 you will get a lot of files so this is not best practice
 
-now 
+now lets create raect using vite
+type npm create vite@latest
+give the filename and choose library and languages
+
+to run npm run dev
