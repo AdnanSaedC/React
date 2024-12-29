@@ -1,9 +1,16 @@
 
+import Adnan from './adnan'
+
+
 function App() {
   
 
   return (
-    <h1>vite</h1>
+    <>
+    //you can return only one tag
+    <Adnan />
+    <h1>How is your day going brother</h1>
+    </>
   )
 }
 

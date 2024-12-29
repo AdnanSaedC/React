@@ -1,9 +1,12 @@
 
-
+import Adnan from './adnan'
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+    <Adnan />
+    <i>That it for today folks</i>
+    </>
   );
 }
 

@@ -1,0 +1,20 @@
+Single page Application AkA SPA
+
+it is only thing where all changes reflects
+
+npscript tag is used to display the stuff when js is not available
+
+react is nothing but the core library and reactDom is the web implementation of react
+
+react also creates its own DOM known as reactDom and it is also called as virtualDom
+and it has a function called render
+
+when u r working with pure react everything is done by react-script
+
+lets see what is the case when it comes to vite
+here they just directly import that in the html file
+
+function name and tag name should start with a capital letter
+thats mandatory in vite
+
+you can only return only one tag
