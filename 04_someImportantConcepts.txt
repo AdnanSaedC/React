@@ -1,0 +1,62 @@
+this is made using this website
+https://github.com/acdlite/react-fiber-architecture
+
+
+what is create root method which is there on the main.jsx file
+ReactDom.createRoot
+
+it creates a DOM behind the scene just like what is there for browser
+what is virtualDom
+the Dom created by react is compared with the DOM on the browser
+and then what are the changes required those alone gets updated
+
+whereas in normal javaScript entire dom is kind of recreated
+
+another thing for which react is known for is they update their algo
+after some time using an alogo so that changes should be made in an optimized way
+
+and preventing resource wastage
+
+
+what is react fiber
+it is an alogo used behind the scenes to make the changes in the react
+
+it came to the picture because animation got a huge hit because
+of reacts fast changes
+
+the main ability is to pause,abort and reuse and assigning priority to
+the changes
+
+hydration is the process of includeing js in the web file and making it
+functional changing from static to dynamic
+
+this algo also improves hydration time
+
+Reconcilation is nothing but an algo of react which considers
+the update that has to made. it is mainly used to compare react tree 
+with another tree(browser DOM)
+
+and therefore it is used to decide which part of the UI should change
+
+our job as the developer o just make changes in the state
+the transition will be done by core react
+
+this is the flow which governs the changes in react
+
+there is a tree of your code right now
+a change is made by clicking a button or something else
+then a new entire new tree is created from stractch and then compared
+with existing tree and changes are made
+
+
+if you want to improve the performance of lists in react you ahve to introduces
+keys in them and they should be unique 
+
+you can also make the priority of your change much higher then what react 
+will assign
+
+The top four thing about fiber
+abort
+reuse
+pause
+priority assigning
