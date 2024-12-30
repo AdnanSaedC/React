@@ -18,3 +18,8 @@ function name and tag name should start with a capital letter
 thats mandatory in vite
 
 you can only return only one tag
+
+
+in order to create a new project
+npm create vite@latest
+npm install
