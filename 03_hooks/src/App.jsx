@@ -36,6 +36,21 @@ function App() {
         //the first one is the variable and the other one is a 
         //function which is used to change the variable
         setCounter(counter+1);
+        setCounter(counter+1);
+        setCounter(counter+1);
+        setCounter(counter+1);
+
+        //here only one time it the value will be incremeted because
+        //fiber the enetite update in UI is send batches thats they all
+        //are doing the same task so only one got execeuted
+
+        //now question arises that what if i have to multiple times
+        //lets understand how setCounter function works in the first place
+
+        setCounter((counterValue)=>{ return counterValue+1});
+        //in order to make multiple changes
+        //you have to do it in function
+        setCounter(prevConter=>prevConter+1);
 
         //wallah we made it this is hook
         //which is nothing but a way to update the UI

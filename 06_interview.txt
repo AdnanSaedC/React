@@ -1,0 +1,3 @@
+you can give the data type of array as const
+
+

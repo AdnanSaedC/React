@@ -11,13 +11,13 @@ let obj={
 }
 let myMarks=[1,2,3];
 
-function App(props) {
+function App() {
 
-  //props are nothing but parameters
-  console.log("parameters: ",props);
   return (
     <>
     <h1 className='bg-red-600 text-black rounded-sm'>hello</h1>
+
+    {/* this is the way to give parameters */}
     <Card name="Adnan" otherStuff={obj} marks={myMarks} />
     {/* //here we have to be very careful since javaScript and html has something in common */}
     {/* //thats why class is className here 
