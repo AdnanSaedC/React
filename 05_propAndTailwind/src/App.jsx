@@ -4,13 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Card from './components/card'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+let obj={
+  age:16,
+  gender:"male",
+}
+let myMarks=[1,2,3];
+
+function App(props) {
+
+  //props are nothing but parameters
+  console.log("parameters: ",props);
   return (
     <>
     <h1 className='bg-red-600 text-black rounded-sm'>hello</h1>
-    <Card />
+    <Card name="Adnan" otherStuff={obj} marks={myMarks} />
     {/* //here we have to be very careful since javaScript and html has something in common */}
     {/* //thats why class is className here 
     class will also work very well here
@@ -25,8 +33,6 @@ function App() {
     so we r going to make everything as a component here thats why component folder 
     is intoduced
     */}
-
-    
     </>
   )
 }
