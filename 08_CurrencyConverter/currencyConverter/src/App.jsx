@@ -31,6 +31,7 @@ function App(){
     const tempConvertedAmount = convertedAmount;
 
     setConvertedAmount(tempAmount)
+    //look the above line is not working
     setAmount(tempConvertedAmount)
   }
 return(
