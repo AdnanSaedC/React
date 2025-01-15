@@ -1,0 +1,28 @@
+why we need Context Api in the first place
+
+
+consider a scenario
+<GrandParent/>
+   <Parent>
+      <Child>
+      
+      </Child>
+   </Parent>
+</GrandParent>
+
+look if you want to send something to the Child
+first you have to send the data to the GrandParent
+then Parent then child this is actual flow
+
+now in this case what we are doing is we are telling
+keeping a global storage file where everything is stored 
+
+and each file can access data from that file 
+so reduced the unneccessary data transfer by large extent
+
+to solve this type of issues there are plenty of things 
+available in them market which include 
+context-Api
+react-redux
+redux-toolkit
+zustand
