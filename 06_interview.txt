@@ -1,3 +1,7 @@
 you can give the data type of array as const
 
 
+// notes you can export a default as well as normal function
+
+StrictMode this is wrapper it wrap everything anything below this get the property of this
+

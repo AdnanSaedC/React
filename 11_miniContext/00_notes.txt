@@ -1,0 +1,18 @@
+react does reaction on two things prop and state
+
+now we have something called state management in picture ehich if you wanr a sub component o get the data the parent component need to have that data 
+
+this was traditional approach this was not optimize and can cause rendering
+
+to tackle this issue we have something called stateManagement in place
+
+the entire thing we will have something called store(which is a database) all the data reisdes here and if you want to get the data or make changes you have to ask this things for that
+
+here state aka context-api
+
+all the component should have to access this component
+
+so the goal is to craete a context , make sure each component is able to  use it and just consume it that's it
+
+the problem was u have to send the data to all the component from the parent component
+like from <App/> to <Login/> and that time consuming and fraustating at the same time 

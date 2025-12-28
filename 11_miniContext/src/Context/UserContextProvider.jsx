@@ -21,13 +21,16 @@ import UserContext from "./userContext";
 
 
 function UserContextProvider({children}){
-    
+    //here children everything we wrap between <userContext></uC>
+    // let it be <App/> or whatever it may be
     //we haven't imported useState thats why React.useState
     let [user,setUser]=React.useState(null)
 
     return(
         // user and setUser and the thing which we want to share
-        <UserContext.Provider value={{user,setUser}}>
+        // userContext.provider is coming from react.createContext
+        <UserContext.Provider 
+        value={{user,setUser}}>
         {children}
         {/* children are nothing but the incomimg value
         here we are receiving it passing it further thats it

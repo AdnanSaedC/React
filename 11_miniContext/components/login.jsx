@@ -9,6 +9,7 @@ function Login() {
     const [password, setPassword] = useState('');
     
     //lets look how to send value from userContext
+    //now we are getting the data from useContext
     let {setUser}=useContext(userContext)
     //dude this is flow merijaaaan
 
@@ -31,6 +32,7 @@ function Login() {
     //we are creating a function inside a function
     let handleSubmit=(e) => {
         e.preventDefault();
+        // here user is an object and we adding two fields using setUser
         setUser({username,password})
     }
 

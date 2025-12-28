@@ -61,6 +61,7 @@ const router=createBrowserRouter(
 
       <Route path='user/:userid' element={<User/>}/>
       <Route path='github' element={<Github/>} loader={fetchApiWhenHover}/>
+      {/* here loader does advance preprocessing this happens as soon mouse hovers over the link */}
       {/* look '/:' is neccesaary and userid should be in smallCase */}
       {/* the url should be user/YourName  /: is used to separate them*/}
 

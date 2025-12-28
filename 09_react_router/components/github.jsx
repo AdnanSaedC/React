@@ -3,6 +3,8 @@ import { useLoaderData } from "react-router-dom";
 export default function Github(){
     
     let data=useLoaderData()
+    //you can use this since u have added loader in route in main.jsx
+    
 
     // let [data,setData]=useState([]);
 
@@ -27,7 +29,9 @@ export default function Github(){
 }
 
 export const fetchApiWhenHover=async ()=>{
+
+    //this will load the data as soon as mouse point and not waits for user to click
     const responce = await fetch('https://api.github.com/users/AdnanSaedC')
-        
+
         return responce.json();
 }
