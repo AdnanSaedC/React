@@ -1,67 +1,69 @@
-//this is my code and i got to know there is not problem here
-import React,{useId} from "react";
-
-//useId hook is used to generate a random id
+import React, { useId } from "react";
 
 function InputBox({
     label,
-    Amount=10,
+    Amount = 10,
     onAmountChange,
-    currency="usd",
-    currencyOption=[],
+    currency = "usd",
+    currencyOption = [],
     onCurrencyChange,
-    amountDisable=false,
-    currencyDisable=false,
-})
-{   
-    const AmountInputId=useId()
-    
-    return(
-        <>
-            <div className=" p-3 rounded-lg text-sm flex">
-                <div className="w-1/2">
-                    <label className="text-black mb-2 inline-block"
+    amountDisable = false,
+    currencyDisable = false,
+}) {
+    const AmountInputId = useId();
+
+    return (
+        <div className="w-full bg-white border border-gray-200 rounded-xl p-4 flex gap-4 shadow-sm">
+            
+            {/* Amount Section */}
+            <div className="w-1/2 flex flex-col gap-1">
+                <label
                     htmlFor={AmountInputId}
-                    >
-                        {label}
-                    </label>
+                    className="text-sm font-medium text-gray-700"
+                >
+                    {label}
+                </label>
+
                 <input
-                id={AmountInputId}
-                    className=" w-full bg-transparent py-1.5"
+                    id={AmountInputId}
                     type="number"
                     placeholder="Amount"
                     disabled={amountDisable}
                     value={Amount}
-                    //first we are checking whether the function has been given by the
-                    //user not if yes then return this
-                    onChange={(e)=> onAmountChange && onAmountChange(Number(e.target.value))}
+                    onChange={(e) =>
+                        onAmountChange && onAmountChange(Number(e.target.value))
+                    }
+                    className={`w-full rounded-lg border px-3 py-2 text-sm
+                        focus:outline-none focus:ring-2 focus:ring-blue-500
+                        disabled:bg-gray-100 disabled:cursor-not-allowed`}
                 />
-                <input/>
-                </div>
-                <div className="w-1/2m flex flex-wrap justify-end text-right">
-                    <p className="text-black/40 mb-2 w-full">
-                        currency Type
-                    </p>
-                    <select
-                    value={currency}
-                    onChange={(e)=>onCurrencyChange && onCurrencyChange(e.target.value)}
-                    className="rounded-lg p-1 bg-gray-100 text-gray-800 outline-none"
-                    
-                    >
-                        
-                        {currencyOption.map(
-                            (IndexValue)=>(
-                                //they are not repatedly creating stuff
-                                <option
-                                className="text-black"
-                                key={IndexValue} value={IndexValue}>{IndexValue}</option>
-                            )
-                        )}
-                    </select>
-                </div>
             </div>
-        </>
-    )
+
+            {/* Currency Section */}
+            <div className="w-1/2 flex flex-col items-end gap-1">
+                <p className="text-sm font-medium text-gray-500">
+                    Currency Type
+                </p>
+
+                <select
+                    value={currency}
+                    disabled={currencyDisable}
+                    onChange={(e) =>
+                        onCurrencyChange && onCurrencyChange(e.target.value)
+                    }
+                    className={`w-full max-w-[120px] rounded-lg border px-3 py-2 text-sm bg-gray-50
+                        focus:outline-none focus:ring-2 focus:ring-blue-500
+                        disabled:bg-gray-100 disabled:cursor-not-allowed`}
+                >
+                    {currencyOption.map((value) => (
+                        <option key={value} value={value}>
+                            {value.toUpperCase()}
+                        </option>
+                    ))}
+                </select>
+            </div>
+        </div>
+    );
 }
 
 export default InputBox;

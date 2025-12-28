@@ -1,1 +1,6 @@
 it is a third party library
+
+what we are trying to do here is give the illusion to the user about they are going inthe diffrener url but in reality it is a single page application
+
+the package which we are studying here is react router dom
+

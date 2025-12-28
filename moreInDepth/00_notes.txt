@@ -1,0 +1,41 @@
+Roadmap
+
+react help us to manage complex front end application
+in just a click u can change tons of things
+
+react was created because of phantom problem 
+which is the UI was inconsistent back in the day 
+chages was not reflected in all the places
+
+the core problem was all the variables was maintained by js and the ui is maintained by DOM 
+and there was no sync between them
+
+react gaved consistency in UI
+
+how to create REACT projects
+
+npx is used to execute node packages
+npx create-react-app folder name for creating pure react app we will go with vite
+
+npm create vite@latest
+
+file structure of folder created using react
+in case of react created using react not a bundler
+you will have something called build which converts all your code into basic html css and js
+
+//you have robot.txt file 
+it is for google indexing and manifes.json is for mobile 
+
+when u look at the index.js in the files it does not have a script tag 
+then how js gets injected it happens through react scripts
+incase of vite they are injecting in the html page itself thus removing react-scripts
+
+
+//now vite
+it also give build 
+
+when you return a html in js you have to call use .jsx notations
+use capital letter while naming a component and file name 
+
+
+any change in state rerenders the UI

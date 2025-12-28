@@ -1,93 +1,85 @@
-import React, { useState,useEffect } from "react";
-import useCurrencyInfo from '../hooks/CurrencyInfo'
-import './index.css'
+import React, { useState } from "react";
+import useCurrencyInfo from "../hooks/CurrencyInfo";
 import InputBox from "../components/inputbox";
 
-function App(){
+function App() {
+  const [amount, setAmount] = useState(0);
+  const [from, setFrom] = useState("usd");
+  const [to, setTo] = useState("inr");
+  const [convertedAmount, setConvertedAmount] = useState(0);
 
-  let [amount,setAmount]=useState(0);
-  let [from,setFrom]=useState("usd");
-  let [to,setTo]=useState("inr");
-  let [convertedAmount,setConvertedAmount]=useState(0);
-  
-  let currencyInfo=useCurrencyInfo(from);
+  const currencyInfo = useCurrencyInfo(from);
+  const optionsAvailable = Object.keys(currencyInfo);
 
-  //let extrat the option(values inside the brcakets) usd-(inr,pound)
-  let optionsAvailable=Object.keys(currencyInfo)
-  //let optionsAvailable=[]
-
-
-  const conversion=()=>{
-    //because currency info return object full of valid currencies
+  const conversion = () => {
     setConvertedAmount(amount * currencyInfo[to]);
-  }
+  };
 
   const swap = () => {
-    setFrom(to)
-    setTo(from)
+    setFrom(to);
+    setTo(from);
 
+    setAmount(convertedAmount);
+    setConvertedAmount(amount);
+  };
 
-    const tempAmount = amount;
-    const tempConvertedAmount = convertedAmount;
-
-    setConvertedAmount(tempAmount)
-    //look the above line is not working
-    setAmount(tempConvertedAmount)
-  }
-return(
-  <>
-  <div className="bg-black w-full h-screen text-white flex justify-center">
-    <div className="place-content-center">
+  return (
+    <div className="min-h-screen w-full bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center px-4">
+      
       <form
-        onSubmit={(event)=>{
-          event.preventDefault();
+        onSubmit={(e) => {
+          e.preventDefault();
           conversion();
         }}
+        className="w-full max-w-md bg-white rounded-2xl p-6 space-y-5 shadow-xl"
       >
-        <div>
-          <InputBox  
-          label="from"
+        <h1 className="text-xl font-semibold text-gray-800 text-center">
+          Currency Converter
+        </h1>
+
+        {/* FROM */}
+        <InputBox
+          label="From"
           Amount={amount}
           currencyOption={optionsAvailable}
-          onCurrencyChange={(currency)=>setFrom(currency)}
+          onCurrencyChange={(currency) => setFrom(currency)}
           currency={from}
-          onAmountChange={(amount)=>{setAmount(amount)}}
-          //whenever currency changes calculate the new value based on the new
-          //curremcy
-          amountDisable={false}
-          currencyDisable={false}
-          />
-          {/* this is from components crazy right */}
-        </div>
-        <div>
-          <button onClick={swap}>
+          onAmountChange={(amount) => setAmount(amount)}
+        />
+
+        {/* SWAP BUTTON */}
+        <div className="flex justify-center">
+          <button
+            type="button"
+            onClick={swap}
+            className="px-6 py-2 rounded-full bg-blue-600 text-white text-sm font-medium
+                       hover:bg-blue-700 active:scale-95 transition"
+          >
             Swap
           </button>
         </div>
-        <div>
-          <InputBox  
+
+        {/* TO */}
+        <InputBox
           label="To"
           Amount={convertedAmount}
           currencyOption={optionsAvailable}
-          //whenever currency changes calculate the new value based on the new
-          //curremcy
-          onCurrencyChange={(currency)=>setTo(currency)}
+          onCurrencyChange={(currency) => setTo(currency)}
           currency={to}
-          //onAmountChange={(convertedAmount)=>{setConvertedAmount(convertedAmount)}}
-          amountDisable={false}
-          currencyDisable={false}
-          />
-          {/* this is from components crazy right */}
-        </div>
-        <button type="submit">
-          Covert {from.toUpperCase()} to {to.toLowerCase()}
+          amountDisable={true}
+        />
+
+        {/* SUBMIT */}
+        <button
+          type="submit"
+          className="w-full py-3 rounded-xl bg-green-600 text-white font-semibold
+                     hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition"
+        >
+          Convert {from.toUpperCase()} to {to.toUpperCase()}
         </button>
       </form>
     </div>
-  </div>
-  </>
-)
+  );
 }
 
 export default App;
-

@@ -18,7 +18,10 @@ function App() {
       <Outlet/>
       {/* here what we are doing is we are keep the 
       the header amd the footer same for every page outthere
-      just the main content will differ */}
+      just the main content will differ
+      
+      
+      */}
       <Footer/>
     </>
   )

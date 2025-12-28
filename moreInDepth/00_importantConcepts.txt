@@ -1,0 +1,34 @@
+the diffrence between a framewrok and a library is that
+framewrok are  very rigid in terms of rules
+whereas library are somewhat lineat compare to framewrok
+
+hooks are used to update the UI
+
+some problem in react 
+NO SEO 
+all the things comes to clients browser then rendering happens in the client side which is not good some times
+no routing 
+
+in order to install node packages just go the folder and type
+npm in
+
+when you create a react app using vite you have to install all the node modules separately 
+which is not the case in case of pure 
+
+devDependencies in package.json is for developers not for the production environment
+
+SPA - single page application
+what it does is taken a single html page and add and remove components based on the requirements
+
+react DOM is also known as virtual DOM
+
+in jsx to run a method you have to do this <functionName />
+
+you can only return one component from a react file so golden rule wrap in using
+<></>
+
+
+CRA create react app this is the one whcih create pure react app
+
+while using tailwind u cant use class becuse class is for js
+you have use className

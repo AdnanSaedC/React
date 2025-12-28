@@ -38,22 +38,48 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 //another and easy way
 const router=createBrowserRouter(
   createRoutesFromElements(
+    //here route is a componenet
     <Route path='/' element={<App/>}>
+
+      {/* so basically for / load the app components
+      and in the appcomponent we have outlet who's job is place the components which we provide for diffrent url
+
+      if we dont provide anything in the element it will not show any error just in that path it will empty
+      just header and footer component will be there
+      if you remove the first route component
+      */}
+
       <Route path='' element={<Home/>}/>
       <Route path='about' element={<About/>}/>
+
       <Route path='contact' element={<Contact/>}/>
+      {/* 
+        if you want to drill down you can like this
+        <Route path='/email' element={<Contact/>}/>
+
+      </Route> */}
+
       <Route path='user/:userid' element={<User/>}/>
       <Route path='github' element={<Github/>} loader={fetchApiWhenHover}/>
       {/* look '/:' is neccesaary and userid should be in smallCase */}
       {/* the url should be user/YourName  /: is used to separate them*/}
+
+      {/* anything apart from this mentioned url
+      
+      make sure that it should be at the end*/}
+      <Route path='*' element={<div>404 NOT FOund</div>}/>
     </Route>
   )
 )
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    {/* router is a prop king of parameter */}
+    {/* router is a prop king of parameter 
+    this is the onw which we craeted earlier(router)
+    */}
     <RouterProvider router={router}/>
+
+
   </StrictMode>,
 )
 

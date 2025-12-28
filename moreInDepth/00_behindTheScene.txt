@@ -1,0 +1,29 @@
+how react works in nothing but in case of browser react talks to react-DOM and incase of mobile it talks to recat Native
+
+core recat -> react DOM /Native
+
+//the entire jsx things goes through React.createElement() function and becomes an object which gets rendered on the screen
+
+in case of vanilla js for every change the entire browser gets repainted 
+here in react we create a virtual DOM and we memick the OG DOM
+
+and only the changes in being displayed not the entire html page
+
+REACT architecture
+prev react use to do thngs immedietly now they do things in batches to smoothen the animation
+
+reconsilitaion
+
+it is nothing but diff btwn HTML DOM and virtual DOM and only changing whats needs to be changed
+
+thus reconsilitaion means comparing and finding which nodes has to be updated
+and rendering is all about painting the picture
+
+REACT fiber 
+has 4 things
+1 - abort the process not  if A git changed to B then suddenly into then stops changing into B
+2 - priotize
+3 - wait just wait before doing because some times state may get change
+4 - reuse
+
+like our body here everything is like fiber attached to each other

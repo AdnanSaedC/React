@@ -1,0 +1,7 @@
+first hook which we have is useState which used to change the varibale values
+
+then we have useCallBack what it does is it gives the same function even when react rerenders the component and It freezes the function identity until something in the dependency array changes
+
+then we useEffect it is used to do things only after rendering and only when the dependecy array values changes
+
+useRef is used to save the values of the variables during re rendering and changes in them doesbot cause the react to re render the components
