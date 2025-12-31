@@ -1,0 +1,1 @@
+previously we are giving the values in the context folder now in the app.js itself

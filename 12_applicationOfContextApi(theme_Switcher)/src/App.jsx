@@ -29,7 +29,13 @@ function App() {
 
 
   return (
-    <ThemeProvider value={{themeMode,setLightTheme,setDarkTheme}}>
+    <ThemeProvider 
+    
+    value={{themeMode,setLightTheme,setDarkTheme}}>
+      {/* what we are doing here is we are asking the react to find these values from context which we craeted earlier and over write them with something which we defined just 
+      
+      if we gave something which was not defined while creating context it will still work we do that just to have soething and our app should not break because of undefined
+      */}
       
       <div className="flex flex-wrap min-h-screen items-center">
         <div className="w-full">
