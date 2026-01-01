@@ -1,0 +1,29 @@
+the thing is react is a separate library which takes to react DOM in case of web pages
+and react native in case of mobile apps
+
+similarly redux is a state management library and it is used in recat through react redux
+just like we need both react and react-dom for web pages
+
+we nee' both redux (it is also a library) and recat redux to make redux work in react environment
+
+redux can be used with any js app not only react
+
+it is designed to handle conetxt api better
+
+the only problem with redux is setup takes time just like conetxt api
+to reduce the time required for setup redux tool kit was born an another layer of abstraction over redux 
+
+reducers are the functions used to change the defination of functions
+
+
+so the entiere story is create a store and then slice abnd then use useDispatch to put something and useSelector to get something
+
+and use provider from react to wrap and store as a parameter to send the value
+
+every application has only one store
+
+in order to update the value in the store we need slice
+which takes three parameters 
+one name
+initial state
+reducers

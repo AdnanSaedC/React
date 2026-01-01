@@ -1,0 +1,11 @@
+store it is a single source of truth which is nothing but database (analogy)
+
+reducers are the things wich is used to bring changes in the store
+
+useSelector - this is used to get some value
+useDispatch - this is used to send soem value
+
+useDispatch uses reducres to make changes in the store
+here store and reducers are part of core reducer and useDispatch is part of react reducer
+
+so react reducer reduced ur work on making recat talk to core reducer library

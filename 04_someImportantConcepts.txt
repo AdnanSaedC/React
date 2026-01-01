@@ -60,3 +60,7 @@ abort
 reuse
 pause
 priority assigning
+
+if you are returning an html element then go far jsx else js enogh
+
+the thing is react is a separate library which takes to react DOM in case of web pages
